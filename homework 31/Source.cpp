@@ -10,11 +10,14 @@ int random(int n, int m);
 
 int wordLength(string str);
 
+
+
 int main() {
 	setlocale(LC_ALL, "Russian");
 	srand(time(NULL));
 	int n, m;
 	string str;
+	
 	//Задача 1
 	try {
 		cout << "Задача 1\nВведите диапазон чисел: ";
@@ -25,7 +28,7 @@ int main() {
 		cout << "Ошибка: " << ex.what() << endl << endl;
 	}
 	cin.ignore();
-
+	
 	//Задача 2
 	try {
 		cout << "Задача 2\nВведите слово и его длинну в одном сообщении: ";
@@ -56,7 +59,7 @@ int wordLength(string str) {
 	
 	size_t first = str.find_first_of("0123456789");
 	size_t last = str.find_last_of("0123456789");
-	//if(first && last)																//не могу найти решение, если пользователь вводит допустим слово, пробел и ничего больше
+	//if(first??? && last???)																//не могу найти решение, если пользователь вводит допустим (слово, пробел) и ничего больше
 	//	throw runtime_error("Не найдено значение длинны слова");					//(срабатывает необработанное исключение...)
 	string num = str.substr(first, (last - first) + 1);
 	int str_size = str.find(" ");
